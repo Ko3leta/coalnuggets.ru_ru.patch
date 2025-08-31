@@ -1,17 +1,9 @@
-# pajic's Fabric mod template
+# Coal Nuggets
 
-Preconfigured with:
-- [Parchment](https://parchmentmc.org/) mappings
-- [Stonecutter](https://stonecutter.kikugie.dev/) for multiversioning
-- [Fzzy Config](https://fzzyhmstrs.github.io/fconfig/) for mod configuration
-- [Mod Publish Plugin](https://github.com/modmuss50/mod-publish-plugin) for publishing to Modrinth and CurseForge
+This mod simply adds coal and charcoal nuggets.
 
-Idea run configurations:
-- Run client: Runs the client of the currently active MC version
-- Run server: Runs the server of the currently active MC version
-- Build: Builds the mod for all MC versions
-- Publish: Publishes the mod for all MC versions to Modrinth and CurseForge
+Each coal and charcoal piece converts into 8 nuggets, each nugget smelts 1 item, and the nuggets can be crafted back into a piece.
 
-Required Idea plugins:
-- [Minecraft Development](https://plugins.jetbrains.com/plugin/8327-minecraft-development)
-- [Stonecutter Dev](https://plugins.jetbrains.com/plugin/25044-stonecutter-dev)
+Nuggets can be used to craft a single torch, by placing 2 nuggets in a line above a stick.
+
+They can also be used to fuel the furnace minecart, for a duration 8 times shorter than a piece.

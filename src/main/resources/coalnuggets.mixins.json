@@ -1,12 +1,12 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "me.pajic.modid.mixin",
+  "package": "me.pajic.coalnuggets.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "MinecartFurnaceMixin"
   ],
   "client": [
-    "ExampleMixin"
   ],
   "injectors": {
     "defaultRequire": 1

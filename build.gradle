@@ -12,19 +12,6 @@ base {
 
 repositories {
     maven { url = "https://maven.parchmentmc.org" }
-    maven { url = "https://maven.terraformersmc.com/" }
-    maven { url = "https://maven.fzzyhmstrs.me/"}
-    exclusiveContent {
-        forRepository {
-            maven {
-                name = "Modrinth"
-                url = "https://api.modrinth.com/maven"
-            }
-        }
-        filter {
-            includeGroup "maven.modrinth"
-        }
-    }
 }
 
 dependencies {
@@ -35,8 +22,6 @@ dependencies {
     }
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${property("fabric_version")}"
-    modImplementation "com.terraformersmc:modmenu:${property("modmenu_version")}"
-    modImplementation "me.fzzyhmstrs:fzzy_config:${property("fzzy_version")}"
 }
 
 processResources {
@@ -83,22 +68,17 @@ publishMods {
 
     modrinth {
         accessToken = providers.environmentVariable("MR_KEY")
-        projectId = "projectId"
+        projectId = "iINPdcjW"
         minecraftVersions.add(stonecutter.current.version)
         requires("fabric-api")
-        requires("fzzy-config")
-        optional("modmenu")
     }
 
     curseforge {
         accessToken = providers.environmentVariable("CF_KEY")
-        projectId = "projectId"
+        projectId = "1338492"
         minecraftVersions.add(stonecutter.current.version)
-        javaVersions.add(JavaVersion.VERSION_21)
         clientRequired = true
         serverRequired = true
         requires("fabric-api")
-        requires("fzzy-config")
-        optional("modmenu")
     }
 }

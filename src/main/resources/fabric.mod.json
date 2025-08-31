@@ -1,29 +1,25 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "coalnuggets",
   "version": "${version}",
-  "name": "modname",
-  "description": "",
-  "authors": [],
+  "name": "Coal Nuggets",
+  "description": "Adds coal and charcoal nuggets",
+  "authors": ["pajic", "Moonkey"],
   "contact": {},
   "license": "MIT",
   "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
-    "client": [
-      "me.pajic.modid.ClientMain"
-    ],
     "main": [
-      "me.pajic.modid.Main"
+      "me.pajic.coalnuggets.Main"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "coalnuggets.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric": "*",
-    "minecraft": "${minecraft_version}",
-    "fzzy_config": "*"
+    "minecraft": "${minecraft_version}"
   }
 }
