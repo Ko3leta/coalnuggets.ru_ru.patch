@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.At;
 public class MinecartFurnaceMixin {
 
     @ModifyExpressionValue(
-            method = "interact",
+            method = /*? if <= 1.21.1 {*/"interact"/*?}*//*? if > 1.21.1 {*//*"addFuel"*//*?}*/,
             at = @At(
                     value = "INVOKE",
                     //? if <= 1.21.1
@@ -26,7 +26,7 @@ public class MinecartFurnaceMixin {
     }
 
     @ModifyExpressionValue(
-            method = "interact",
+            method = /*? if <= 1.21.1 {*/"interact"/*?}*//*? if > 1.21.1 {*//*"addFuel"*//*?}*/,
             at = @At(
                     value = "CONSTANT",
                     args = "intValue=3600"
