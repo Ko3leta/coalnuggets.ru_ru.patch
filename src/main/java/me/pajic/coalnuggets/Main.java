@@ -52,8 +52,7 @@ public class Main implements ModInitializer {
         //? if <= 1.21.1 {
         FuelRegistry.INSTANCE.add(COAL_NUGGET, 200);
         FuelRegistry.INSTANCE.add(CHARCOAL_NUGGET, 200);
-        //?}
-        //? if > 1.21.1 {
+        //?} else {
         /*FuelRegistryEvents.BUILD.register((builder, context) -> {
             builder.add(COAL_NUGGET, 200);
             builder.add(CHARCOAL_NUGGET, 200);
