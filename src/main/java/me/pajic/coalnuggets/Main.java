@@ -12,9 +12,9 @@ import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 //? if <= 1.21.1
-import net.fabricmc.fabric.api.registry.FuelRegistry;
+/*import net.fabricmc.fabric.api.registry.FuelRegistry;*/
 //? if > 1.21.1
-/*import net.fabricmc.fabric.api.registry.FuelRegistryEvents;*/
+import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 
 public class Main implements ModInitializer {
     private static final String MOD_ID = "coalnuggets";
@@ -34,7 +34,7 @@ public class Main implements ModInitializer {
             new Item(
                     new Item.Properties()
                     //? if > 1.21.1
-                    /*.setId(COAL_NUGGET_KEY)*/
+                    .setId(COAL_NUGGET_KEY)
             )
     );
     public static final Item CHARCOAL_NUGGET = Registry.register(
@@ -43,21 +43,21 @@ public class Main implements ModInitializer {
             new Item(
                     new Item.Properties()
                     //? if > 1.21.1
-                    /*.setId(CHARCOAL_NUGGET_KEY)*/
+                    .setId(CHARCOAL_NUGGET_KEY)
             )
     );
 
     @Override
     public void onInitialize() {
         //? if <= 1.21.1 {
-        FuelRegistry.INSTANCE.add(COAL_NUGGET, 200);
+        /*FuelRegistry.INSTANCE.add(COAL_NUGGET, 200);
         FuelRegistry.INSTANCE.add(CHARCOAL_NUGGET, 200);
-        //?} else {
-        /*FuelRegistryEvents.BUILD.register((builder, context) -> {
+        *///?} else {
+        FuelRegistryEvents.BUILD.register((builder, context) -> {
             builder.add(COAL_NUGGET, 200);
             builder.add(CHARCOAL_NUGGET, 200);
         });
-        *///?}
+        //?}
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.INGREDIENTS).register(entries -> {
             entries.addAfter(Items.COAL, COAL_NUGGET);
             entries.addAfter(Items.CHARCOAL, CHARCOAL_NUGGET);

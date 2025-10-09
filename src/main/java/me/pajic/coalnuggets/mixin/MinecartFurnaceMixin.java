@@ -12,13 +12,13 @@ import org.spongepowered.asm.mixin.injection.At;
 public class MinecartFurnaceMixin {
 
     @ModifyExpressionValue(
-            method = /*? if <= 1.21.1 {*/"interact"/*?} else {*//*"addFuel"*//*?}*/,
+            method = /*? if <= 1.21.1 {*//*"interact"*//*?} else {*/"addFuel"/*?}*/,
             at = @At(
                     value = "INVOKE",
                     //? if <= 1.21.1
-                    target = "Lnet/minecraft/world/item/crafting/Ingredient;test(Lnet/minecraft/world/item/ItemStack;)Z"
+                    /*target = "Lnet/minecraft/world/item/crafting/Ingredient;test(Lnet/minecraft/world/item/ItemStack;)Z"*/
                     //? if > 1.21.1
-                    /*target = "Lnet/minecraft/world/item/ItemStack;is(Lnet/minecraft/tags/TagKey;)Z"*/
+                    target = "Lnet/minecraft/world/item/ItemStack;is(Lnet/minecraft/tags/TagKey;)Z"
             )
     )
     private boolean acceptNuggetsAsFuel(boolean original, @Local ItemStack itemStack) {
@@ -26,7 +26,7 @@ public class MinecartFurnaceMixin {
     }
 
     @ModifyExpressionValue(
-            method = /*? if <= 1.21.1 {*/"interact"/*?}*//*? if > 1.21.1 {*//*"addFuel"*//*?}*/,
+            method = /*? if <= 1.21.1 {*//*"interact"*//*?}*//*? if > 1.21.1 {*/"addFuel"/*?}*/,
             at = @At(
                     value = "CONSTANT",
                     args = "intValue=3600"
