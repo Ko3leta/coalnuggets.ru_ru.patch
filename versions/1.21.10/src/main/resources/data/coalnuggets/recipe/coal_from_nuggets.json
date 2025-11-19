@@ -1,14 +1,16 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "group": "coal",
-  "key": {
-    "#": "coalnuggets:coal_nugget"
-  },
-  "pattern": [
-    "###",
-    "# #",
-    "###"
+  "ingredients": [
+    "coalnuggets:coal_nugget",
+    "coalnuggets:coal_nugget",
+    "coalnuggets:coal_nugget",
+    "coalnuggets:coal_nugget",
+    "coalnuggets:coal_nugget",
+    "coalnuggets:coal_nugget",
+    "coalnuggets:coal_nugget",
+    "coalnuggets:coal_nugget"
   ],
   "result": {
     "id": "minecraft:coal"

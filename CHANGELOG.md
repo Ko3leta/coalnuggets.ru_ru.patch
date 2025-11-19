@@ -1,1 +1,1 @@
-- Fix recipes and textures
+- Changed coal nuggets into coal piece recipe to be shapeless.

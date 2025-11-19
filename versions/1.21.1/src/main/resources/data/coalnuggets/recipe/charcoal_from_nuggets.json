@@ -1,16 +1,32 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "group": "charcoal",
-  "key": {
-    "#": {
+  "ingredients": [
+    {
+      "item": "coalnuggets:charcoal_nugget"
+    },
+    {
+      "item": "coalnuggets:charcoal_nugget"
+    },
+    {
+      "item": "coalnuggets:charcoal_nugget"
+    },
+    {
+      "item": "coalnuggets:charcoal_nugget"
+    },
+    {
+      "item": "coalnuggets:charcoal_nugget"
+    },
+    {
+      "item": "coalnuggets:charcoal_nugget"
+    },
+    {
+      "item": "coalnuggets:charcoal_nugget"
+    },
+    {
       "item": "coalnuggets:charcoal_nugget"
     }
-  },
-  "pattern": [
-    "###",
-    "# #",
-    "###"
   ],
   "result": {
     "id": "minecraft:charcoal"
