@@ -1,2 +1,1 @@
-- Updated to Minecraft 1.21.11.
-- Added Korean translation ([#1](https://github.com/pajicadvance/coal-nuggets/pull/1))
+- Added Simplified Chinese translation ([#2](https://github.com/pajicadvance/coal-nuggets/issues/2)).
