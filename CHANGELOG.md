@@ -1,1 +1,1 @@
-- Added Simplified Chinese translation ([#2](https://github.com/pajicadvance/coal-nuggets/issues/2)).
+- Removed coal nuggets from vanilla coals tag (fixes being able to craft some recipes which require regular coal with coal nuggets)
